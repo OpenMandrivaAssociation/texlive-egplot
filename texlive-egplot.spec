@@ -1,3 +1,9 @@
+# revision 20617
+# category Package
+# catalog-ctan /macros/latex/contrib/egplot
+# catalog-date 2010-11-30 14:05:46 +0100
+# catalog-license gpl
+# catalog-version 1.02a
 Name:		texlive-egplot
 Version:	1.02a
 Release:	1
@@ -47,6 +53,7 @@ with the document source itself.
 %doc %{_texmfdistdir}/source/latex/egplot/egplot.dtx
 %doc %{_texmfdistdir}/source/latex/egplot/egplot.ins
 %doc %{_texmfdistdir}/source/latex/egplot/egpman.drv
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -57,3 +64,5 @@ with the document source itself.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
