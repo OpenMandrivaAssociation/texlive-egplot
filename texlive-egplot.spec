@@ -6,7 +6,7 @@
 # catalog-version 1.02a
 Name:		texlive-egplot
 Version:	1.02a
-Release:	1
+Release:	2
 Summary:	Encapsulate Gnuplot sources in LaTeX documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/egplot
