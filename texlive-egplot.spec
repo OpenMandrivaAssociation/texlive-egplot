@@ -4,13 +4,14 @@
 # catalog-date 2010-11-30 14:05:46 +0100
 # catalog-license gpl
 # catalog-version 1.02a
+
+Summary:	Encapsulate Gnuplot sources in LaTeX documents
 Name:		texlive-egplot
 Version:	1.02a
-Release:	2
-Summary:	Encapsulate Gnuplot sources in LaTeX documents
-Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/egplot
+Release:	3
 License:	GPL
+Group:		Publishing
+Url:		http://www.ctan.org/tex-archive/macros/latex/contrib/egplot
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/egplot.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/egplot.doc.tar.xz
 Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/egplot.source.tar.xz
@@ -53,17 +54,4 @@ with the document source itself.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.02a-2
-+ Revision: 751331
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.02a-1
-+ Revision: 718313
-- texlive-egplot
-- texlive-egplot
-- texlive-egplot
-- texlive-egplot
 
