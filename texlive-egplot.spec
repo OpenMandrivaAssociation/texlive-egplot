@@ -8,7 +8,7 @@
 Summary:	Encapsulate Gnuplot sources in LaTeX documents
 Name:		texlive-egplot
 Version:	1.02a
-Release:	11
+Release:	12
 License:	GPL
 Group:		Publishing
 Url:		http://www.ctan.org/tex-archive/macros/latex/contrib/egplot
