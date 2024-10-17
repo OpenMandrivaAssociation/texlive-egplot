@@ -4,7 +4,7 @@ Version:	20617
 Release:	2
 License:	GPL
 Group:		Publishing
-Url:		http://www.ctan.org/tex-archive/macros/latex/contrib/egplot
+Url:		https://www.ctan.org/tex-archive/macros/latex/contrib/egplot
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/egplot.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/egplot.doc.r%{version}.tar.xz
 Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/egplot.source.r%{version}.tar.xz
