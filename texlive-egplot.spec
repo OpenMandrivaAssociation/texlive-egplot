@@ -1,50 +1,25 @@
+%global tl_name egplot
+%global tl_revision 20617
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	1.02a
+Release:	%{tl_revision}.1
 Summary:	Encapsulate Gnuplot sources in LaTeX documents
-Name:		texlive-egplot
-Version:	20617
-Release:	2
-License:	GPL
 Group:		Publishing
-Url:		https://www.ctan.org/tex-archive/macros/latex/contrib/egplot
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/egplot.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/egplot.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/egplot.source.r%{version}.tar.xz
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/egplot
+License:	gpl
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/egplot.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/egplot.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/egplot.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-A package to encapsulate gnuplot commands in a LaTeX source
-file, so that a document's figures are maintained in parallel
-with the document source itself.
+A package to encapsulate gnuplot commands in a LaTeX source file, so
+that a document's figures are maintained in parallel with the document
+source itself.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/egplot/egplot.sty
-%doc %{_texmfdistdir}/doc/latex/egplot/egplot.README
-%doc %{_texmfdistdir}/doc/latex/egplot/egplot.pdf
-%doc %{_texmfdistdir}/doc/latex/egplot/manual.ps.gz
-#- source
-%doc %{_texmfdistdir}/source/latex/egplot/egplot.drv
-%doc %{_texmfdistdir}/source/latex/egplot/egplot.dtx
-%doc %{_texmfdistdir}/source/latex/egplot/egplot.ins
-%doc %{_texmfdistdir}/source/latex/egplot/egpman.drv
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
